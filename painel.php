@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 if(!isset($_SESSION["usuario"])){
     header("location: login.php");
     exit;
@@ -14,10 +13,14 @@ if(!isset($_SESSION["usuario"])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Painel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bem-vindo, <?php htmlspecialchars ($_SESSION["usuario"]) ?></h1>
-    <p>Esta pagina é secreta. So quem faz login consegue ver</p>
-    <a href="sair.php">Sair<a>
+    <main class="cartao">
+        <span class="selo">Área secreta</span>
+        <h1>Bem-vindo, <?php htmlspecialchars ($_SESSION["usuario"]) ?></h1>
+        <p class="subtitulo">Esta pagina é secreta. So quem faz login consegue ver</p>
+        <a class="botao-sair" href="sair.php">Sair<a>
+    </main>
 </body>
 </html>

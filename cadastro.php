@@ -32,15 +32,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Criar conta</h1>
-    <p><strong><?= htmlspecialchars($mensagem) ?></strong></p>
-    <form method="post">
-        <p><input type="text" name="usuario" placeholder="Escolher um usuário"></p>
-        <p><input type="password" name="senha" placeholder="Escolha uma senha"></p>
-        <button>Cadastrar</button>
-    </form>
-    <p><a href="login.php"> Já tenho conta</a></p>
+    <main class="cartao">
+        <h1>Criar conta</h1>
+        <p class="subtitulo">Escolha um usuário e uma senha</p>
+        <p class="mensagem"><strong><?= htmlspecialchars($mensagem) ?></strong></p>
+        <form method="post">
+            <p><input type="text" name="usuario" placeholder="Escolher um usuário"></p>
+            <p><input type="password" name="senha" placeholder="Escolha uma senha"></p>
+            <button>Cadastrar</button>
+        </form>
+        <p class="links"><a href="login.php">Já tenho conta</a></p>
+    </main>
 </body>
 </html>
